@@ -53,7 +53,7 @@ body {
     background-position-y: 145px;
   }
   
-  .btn-primary {
+  .btn-primary-about {
     background-color: #F47522;
     border-radius: 10px;
     border: none;
@@ -103,6 +103,7 @@ body {
   
   .table-kiri {
     width: 20px;
+    text-align: left;
   }
   
   span1 {
