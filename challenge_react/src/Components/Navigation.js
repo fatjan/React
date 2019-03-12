@@ -1,0 +1,77 @@
+import React from "react";
+import {Link} from "react-router-dom";
+import logo from "../asset/logo/logo-alterra-academy.png";
+
+const logoWrapper = {
+    display: "block",
+    width: "100px",
+    float: "left",
+    textAlign: "center"
+};
+
+const Navigation = props => {
+    const is_login = JSON.parse(localStorage.getItem("is_login"));
+    console.log("is_login", is_login)
+    if (is_login !== null) {
+    return (
+        <nav id = "topnav">
+            {/* <div style={logoWrapper}>
+                <img src={logo} className="App-logo" alt="logo" /> <b>ReactNews</b>
+            </div> */}
+
+            <div className="navbar-top" id="ini">
+                <div className="container-fluid">
+                    <div className="row" id="ini">
+                          <div className="col-md-6 col-sm-6 judul">
+                              <span id="judul_logo">Kumparan</span>
+                          </div>
+                          <div className="col-md-6 col-sm-6 link">          
+                     
+                            {/* <Link to="/">Home</Link> */}
+                           
+                                <Link to="/signup">SignUp</Link>
+                           
+                                <Link to="/signin">SignIn</Link>
+                           
+                                {/* <Link to="/profile">Profile</Link> */}
+                          
+                                {/* <Link to="/" onClick={() => props.postSignout()}>SignOut</Link> */}
+                          </div>
+                  </div>
+              </div>
+            </div>
+        </nav>
+    );
+        } else { return (
+            <nav id = "topnav">
+            {/* <div style={logoWrapper}>
+                <img src={logo} className="App-logo" alt="logo" /> <b>ReactNews</b>
+            </div> */}
+
+            <div className="navbar-top" id="ini">
+                <div className="container-fluid">
+                    <div className="row" id="ini">
+                          <div className="col-md-6 col-sm-6 judul">
+                              <span id="judul_logo">Kumparan</span>
+                          </div>
+                          <div className="col-md-6 col-sm-6 link">          
+                     
+                            <Link to="/">Home</Link>
+                           
+                                {/* <Link to="/signup">SignUp</Link> */}
+                           
+                                {/* <Link to="/signin">SignIn</Link> */}
+                           
+                                <Link to="/profile">Profile</Link>
+                          
+                                <Link to="/signin" onClick={() => props.postSignout()}>SignOut</Link>
+                          </div>
+                  </div>
+              </div>
+            </div>
+        </nav>
+        );
+        };
+};
+
+export default Navigation;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import img from '../asset/logo/eagle.png';
 
 class Header extends Component {
     render() {
@@ -7,9 +6,8 @@ class Header extends Component {
         <div className="navbar-top" id="ini">
               <div className="container-fluid">
                   <div className="row" id="ini">
-                          <div className="col-md-3 col-sm-3">
-                              <img className="logo-al" src={img} alt="ini gambar"/>
-                              <span id="judul_logo">KabarKabar</span>
+                          <div className="col-md-3 col-sm-3 judul">
+                              <span id="judul_logo">Kumparan</span>
                           </div>
                           <div className="col-md-6 col-sm-6 link">          
                               <a href="#" id="Sepakbola">Sepak Bola</a>
