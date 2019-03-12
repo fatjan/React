@@ -8,7 +8,7 @@ class Header extends Component {
               <div className="container-fluid">
                   <div className="row" id="ini">
                           <div className="col-md-3 col-sm-3">
-                              <img className="logo-al" src={img} />
+                              <img className="logo-al" src={img} alt="ini gambar"/>
                               <span id="judul_logo">KabarKabar</span>
                           </div>
                           <div className="col-md-6 col-sm-6 link">          

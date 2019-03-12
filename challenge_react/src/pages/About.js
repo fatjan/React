@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from '../Components/Header';
-import Table from '../Components/Table';
 import Search from '../Components/Search';
-import Blogs from '../Components/Blogs';
-import Blogs1 from '../Components/Blogs1';
 import '../asset/css/about.css';
+import News from '../Components/News';
+import NewsKiri from '../Components/NewsKiri';
 
 class About extends Component {
     render() {
+      console.log('tampillllll')
       return (
         <div>   
           <Header />   
@@ -17,14 +17,20 @@ class About extends Component {
                   <br/>
                   <Search />
                   <br/>
-                  <Table />
+                  <table> 
+                   <tr>
+                    <td>
+                        <h3 style={{padding: '0 60px 0 0'}}>Todays' Headlines</h3>
+                    </td>
+                  </tr>
+                </table>
+                  <NewsKiri />
                 </div>  
                 <div className="col-md-7 col-sm-7">
                   <br />
-                  <Blogs />
-                  <Blogs1 />
+                 
+                  <News />
                 </div>   
-                
             </div>
         </div>
         
