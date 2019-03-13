@@ -15,7 +15,7 @@ const n_content = "This is the example of a single content."
 //News API
 const apiKey = "b52d5a69e15d4703b23b7f2b94f2beb7";
 const baseUrl = "https://newsapi.org/v2/";
-const urlHeadLine = baseUrl + "top-headLines?country=id&" + "pageSize=5&" + "apiKey=" + apiKey;
+const urlHeadLine = baseUrl + "top-headLines?country=id&" + "pageSize=7&" + "apiKey=" + apiKey;
 
 // https://newsapi.org/v2/top-headlines?country=us&apiKey=b52d5a69e15d4703b23b7f2b94f2beb7
 

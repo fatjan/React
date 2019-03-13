@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Search from './Search';
 import ListNews from './ListNews';
+import foto from '../asset/img/jake-allison-1322894-unsplash.jpg';
 
 const apiKey = "b52d5a69e15d4703b23b7f2b94f2beb7";
 const baseUrl = "https://newsapi.org/v2/";
@@ -98,7 +99,7 @@ class SearchCategory extends Component {
                     </div>
                   
                         {listNews.map((item, key) => {
-                        // const src_img = item.urlToImage === null ? foto : item.urlToImage;
+                        const src_img = item.urlToImage === null ? foto : item.urlToImage;
                         const description = item.urlToImage !== null ? item.description : "";
                         return <ListNews key={key} title={item.name} content={description} />;
                     })}
