@@ -2,19 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './asset/css/index.css';
-import About from './pages/About';
 import * as serviceWorker from './serviceWorker';
 import AppRouter from "./AppRouter";
 import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'unistore/react';
+import {store} from "./Components/store";
 
 
 
 const rootEl = document.getElementById('root');
 const render = Component =>
     ReactDOM.render(
-        <BrowserRouter>
-        <Component />
-        </BrowserRouter>,
+        <Provider store={store} >
+            <BrowserRouter>
+                <Component />
+            </BrowserRouter>
+        </Provider>,
         rootEl
     ); 
     

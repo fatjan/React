@@ -8,7 +8,7 @@ import Search from './Search';
 // import '../asset/css/bootstrap.min.css';
 
 // dummy data
-import foto from '../asset/img/jake-allison-1322894-unsplash.jpg';
+import foto from '../asset/img/jay-lee-1323073-unsplash.jpg';
 const n_title = "This is the title of the news";
 const n_content = "This is the example of a single content."
 

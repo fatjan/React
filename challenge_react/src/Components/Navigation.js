@@ -1,6 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import logo from "../asset/logo/logo-alterra-academy.png";
+import { connect } from "unistore/react";
+import { actions } from "./store";
+import { withRouter } from "react-router-dom";
+
+
 
 const logoWrapper = {
     display: "block",
@@ -10,9 +15,9 @@ const logoWrapper = {
 };
 
 const Navigation = props => {
-    const is_login = JSON.parse(localStorage.getItem("is_login"));
-    console.log("is_login", is_login)
-    if (is_login !== null) {
+    // const is_login = JSON.parse(localStorage.getItem("is_login"));
+    // console.log("is_login", is_login)
+    if (!props.is_login) {
     return (
         <nav id = "topnav">
             {/* <div style={logoWrapper}>
@@ -57,6 +62,8 @@ const Navigation = props => {
                           <div className="col-md-6 col-sm-6 link">          
                      
                             <Link to="/">Home</Link>
+
+                            <Link to="/news">News</Link>
                            
                                 {/* <Link to="/signup">SignUp</Link> */}
                            
@@ -64,7 +71,7 @@ const Navigation = props => {
                            
                                 <Link to="/profile">Profile</Link>
                           
-                                <Link to="/signin" onClick={() => props.postSignout()}>SignOut</Link>
+                                <Link to="/signin" onClick={() => props.postLogout()}>SignOut</Link>
                           </div>
                   </div>
               </div>
@@ -74,4 +81,9 @@ const Navigation = props => {
         };
 };
 
-export default Navigation;
+// export default Navigation;
+
+export default connect (
+    "is_login",
+    actions
+) (withRouter (Navigation));

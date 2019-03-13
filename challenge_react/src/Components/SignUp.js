@@ -21,7 +21,7 @@ class SignIn extends Component {
                     <section className="content signin">
                         <form onSubmit={e => e.preventDefault()}>
                             <br/><br/>
-                            <h4>SignIn</h4>
+                            <h4>SignUp yukkk</h4>
                             <div>
                                 <input 
                                     type="text"
@@ -35,6 +35,22 @@ class SignIn extends Component {
                                     type="password"
                                     name="password"
                                     placeholder="Password"
+                                    onChange={e => this.props.setField(e)}
+                                />
+                            </div>
+                            <div>
+                                <input 
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    onChange={e => this.props.setField(e)}
+                                />
+                            </div>
+                            <div>
+                                <input 
+                                    type="full_name"
+                                    name="full_name"
+                                    placeholder="Full Name"
                                     onChange={e => this.props.setField(e)}
                                 />
                             </div>
