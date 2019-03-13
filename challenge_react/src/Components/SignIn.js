@@ -8,6 +8,7 @@ class SignIn extends Component {
     doLogin = () => {
         this.props.postLogin().then(() => {
             console.log("this", this);
+            console.log(localStorage)
             this.props.history.replace("/profile");
         });
     };

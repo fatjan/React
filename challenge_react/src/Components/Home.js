@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import Navigation from '../Components/Navigation';
 import Search from '../Components/Search';
 import '../asset/css/about.css';
-import News from '../Components/News';
+// import News from '../Components/News';
+// import News_1 from '../Components/News_1';
 import NewsKiri from '../Components/NewsKiri';
 import SearchCategory from './SearchEverythingByCategory';
+import News_1 from './News_1';
 
 class Home extends Component {
     render() {
@@ -13,7 +15,6 @@ class Home extends Component {
       return (
         <div>   
           {/* <Navigation />    */}
-          {/* <h1>INI KUYAKIN HOME</h1> */}
             <div className="row">
                 <div className="col-md-1 col-sm-1"></div>
                 <div className="col-md-4 col-sm-4 kiri">
@@ -32,7 +33,7 @@ class Home extends Component {
                 <div className="col-md-7 col-sm-7">
                   <br />
                  
-                  <News />
+                  <News_1 />
                 </div>   
             </div>
             {/* <div className="row">
